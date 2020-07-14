@@ -1,0 +1,18 @@
+Esses tempos em deparei com um trecho que código que me fez repensar a forma como eu encaro o C#. O código me assustou um pouco, porque tinha tanto modificador novo ou que eu achava que conhecia, mas no fundo eu não entendia o real funcionamento dele. Então deu uma pausa na programação e parti pra exploração. Posso adiantar que valeu muito a pena, ajudou bastante a evoluir a visão que eu tinha do C# e a forma como eu trabalho com ele.
+
+Pra começar eu vou falar do modificador que foi a causa disso tudo, o **delegate**.
+#### Delegate
+Delegates são, em sua essência, uma referência a um método. Sua declaração se assemelha uma *interface*, pois define um tipo de retorno do método e uma lista de parâmetros.
+
+    delegate <TIPO DE RETORNO> <NOME DO DELEGATE>(<PARÂMETROS>)
+    
+Logo, para declarar um delegate do tipo *int*, que recebe uma *string*, devemos ter
+    
+    delegate int del(string str)
+    
+##### Utilização do delegate
+Abaixo temos um trecho de código que realiza a média aritmética dos alunos de uma turma.
+
+    delegate double mean(int n, double[] grades);
+    
+    
